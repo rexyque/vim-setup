@@ -202,6 +202,8 @@ hi def link	csXmlCommentLeader	Comment
 hi def link	csXmlComment	Comment
 hi def link	csXmlTag	Statement
 
+" function blocks
+syn region      csBlock                     start="{" end="}" transparent fold
 let b:current_syntax = 'cs'
 
 let &cpoptions = s:save_cpo
