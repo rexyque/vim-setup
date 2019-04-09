@@ -29,7 +29,13 @@ augroup dotnet
     au FileType cs,cshtml setlocal errorformat=\ %#%f(%l\\\,%c):\ %m\ \\\[%.%#
 augroup END
 
-set runtimepath^=/usr/share/vim/plugins/rainbow_parentheses.vim
-augroup rainbow_parens
-    au BufRead,BufNewFile * RainbowParentheses
+augroup texFormat
+    au FileType tex,bib setlocal wrap
+    au FileType tex,bib setlocal linebreak
+    au FileType tex,bib map <buffer> j gj
+    au FileType tex,bib map <buffer> k gk
+    au FileType tex,bib map <buffer> $ g$
+    au FileType tex,bib map <buffer> ^ g^
+    au FileType tex,bib map <buffer> 0 g0
+    au FileType tex,bib setlocal cc=
 augroup END
