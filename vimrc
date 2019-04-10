@@ -11,12 +11,11 @@ set expandtab
 set tabstop=4
 set incsearch
 set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
-
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+let mapleader=","
 
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
@@ -38,4 +37,8 @@ augroup texFormat
     au FileType tex,bib map <buffer> ^ g^
     au FileType tex,bib map <buffer> 0 g0
     au FileType tex,bib setlocal cc=
+augroup END
+
+augroup commonTasks
+    au VimEnter * nnoremap <Leader><Space> :nohlsearch<CR>
 augroup END
