@@ -19,6 +19,7 @@ let mapleader=","
 
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
+    au BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml
 augroup END
 augroup formatting
     au FileType c,cpp,cs setlocal cindent
