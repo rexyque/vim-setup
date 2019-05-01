@@ -30,14 +30,14 @@ augroup dotnet
 augroup END
 
 augroup texFormat
-    au FileType tex,bib setlocal wrap
-    au FileType tex,bib setlocal linebreak
-    au FileType tex,bib map <buffer> j gj
-    au FileType tex,bib map <buffer> k gk
-    au FileType tex,bib map <buffer> $ g$
-    au FileType tex,bib map <buffer> ^ g^
-    au FileType tex,bib map <buffer> 0 g0
-    au FileType tex,bib setlocal cc=
+    au FileType tex,bib,markdown setlocal wrap
+    au FileType tex,bib,markdown setlocal linebreak
+    au FileType tex,bib,markdown map <buffer> j gj
+    au FileType tex,bib,markdown map <buffer> k gk
+    au FileType tex,bib,markdown map <buffer> $ g$
+    au FileType tex,bib,markdown map <buffer> ^ g^
+    au FileType tex,bib,markdown map <buffer> 0 g0
+    au FileType tex,bib,markdown setlocal cc=
 augroup END
 
 augroup commonTasks
