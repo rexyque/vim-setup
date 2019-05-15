@@ -16,13 +16,15 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 let mapleader=","
+let g:markdown_folding=1
 
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
     au BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml
 augroup END
 augroup formatting
-    au FileType c,cpp,cs setlocal cindent
+    au FileType c,cpp setlocal cindent
+    au FileType cs setlocal nocindent
     au FileType c,cpp,cs setlocal fdm=syntax
     au FileType tex,bib,markdown setlocal wrap
     au FileType tex,bib,markdown setlocal linebreak
