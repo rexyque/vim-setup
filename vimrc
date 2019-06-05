@@ -17,6 +17,7 @@ set nofoldenable
 set foldlevel=2
 let mapleader=","
 let g:markdown_folding=1
+let g:sql_type_default="pgsql"
 
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
@@ -25,7 +26,7 @@ augroup END
 augroup formatting
     au FileType c,cpp setlocal cindent
     au FileType cs setlocal nocindent
-    au FileType c,cpp,cs setlocal fdm=syntax
+    "au FileType c,cpp,cs setlocal fdm=syntax
     au FileType tex,bib,markdown setlocal wrap
     au FileType tex,bib,markdown setlocal linebreak
     au FileType tex,bib,markdown map <buffer> j gj
