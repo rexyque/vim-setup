@@ -34,7 +34,7 @@ augroup formatting
     au FileType tex,bib,markdown map <buffer> $ g$
     au FileType tex,bib,markdown map <buffer> ^ g^
     au FileType tex,bib,markdown map <buffer> 0 g0
-    au FileType tex,bib,markdown setlocal cc=
+    au FileType tex,bib,markdown,csv setlocal cc=
 augroup END
 augroup dotnet
     au FileType cs,cshtml setlocal errorformat=\ %#%f(%l\\\,%c):\ %m\ \\\[%.%#
