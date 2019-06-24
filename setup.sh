@@ -1,6 +1,7 @@
 #!/bin/bash
+outdir=/usr/share/vim/vim81
 
 cp ./vimrc /etc/
-cp ./plantuml.vim /usr/share/vim/vim81/syntax/
-cp ./cs*.vim /usr/share/vim/vim81/syntax/
-cp ./codedark.vim /usr/share/vim/vim81/colors/
+cp ./p*.vim $outdir/syntax/
+cp ./cs*.vim $outdir/syntax/
+cp ./codedark.vim $outdir/colors/

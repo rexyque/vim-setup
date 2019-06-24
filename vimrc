@@ -17,6 +17,7 @@ set nofoldenable
 set foldlevel=2
 let mapleader=","
 let g:markdown_folding=1
+let g:sql_type_default="pgsql"
 
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
@@ -39,7 +40,7 @@ augroup texFormat
     au FileType tex,bib,markdown map <buffer> $ g$
     au FileType tex,bib,markdown map <buffer> ^ g^
     au FileType tex,bib,markdown map <buffer> 0 g0
-    au FileType tex,bib,markdown setlocal cc=
+    au FileType tex,bib,markdown,csv setlocal cc=
 augroup END
 
 augroup commonTasks
