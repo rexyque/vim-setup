@@ -22,11 +22,12 @@ let g:sql_type_default="pgsql"
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
     au BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml
+    au BufRead,BufNewFile *.h set filetype=c
 augroup END
 augroup formatting
     au FileType c,cpp setlocal cindent
+    au FileType c,cpp setlocal formatoptions=croql
     au FileType cs setlocal nocindent
-    "au FileType c,cpp,cs setlocal fdm=syntax
     au FileType tex,bib,markdown setlocal wrap
     au FileType tex,bib,markdown setlocal linebreak
     au FileType tex,bib,markdown map <buffer> j gj
@@ -35,12 +36,11 @@ augroup formatting
     au FileType tex,bib,markdown map <buffer> ^ g^
     au FileType tex,bib,markdown map <buffer> 0 g0
     au FileType tex,bib,markdown,csv setlocal cc=
+    au FileType make setlocal noexpandtab
 augroup END
 augroup dotnet
     au FileType cs,cshtml setlocal errorformat=\ %#%f(%l\\\,%c):\ %m\ \\\[%.%#
 augroup END
-
-
 augroup commonTasks
     au VimEnter * nnoremap <Leader><Space> :nohlsearch<CR>
 augroup END
