@@ -22,9 +22,11 @@ let g:sql_type_default="pgsql"
 augroup filetypes
     au BufRead,BufNewFile *.cshtml setfiletype cshtml
     au BufRead,BufNewFile *.pu,*.uml,*.plantuml setfiletype plantuml
+    au BufRead,BufNewFile *.h set filetype=c
 augroup END
 augroup formatting
     au FileType c,cpp setlocal cindent
+    au FileType c,cpp setlocal formatoptions=croql
     au FileType cs setlocal nocindent
     au FileType c,cpp,cs setlocal fdm=syntax
 augroup END
@@ -41,6 +43,7 @@ augroup texFormat
     au FileType tex,bib,markdown map <buffer> ^ g^
     au FileType tex,bib,markdown map <buffer> 0 g0
     au FileType tex,bib,markdown,csv setlocal cc=
+    au FileType make setlocal noexpandtab
 augroup END
 
 augroup commonTasks
